@@ -1,0 +1,2 @@
+/** @format */
+import './src/App'
