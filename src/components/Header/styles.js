@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: colors.white,
-    fontSize: 50,
+    fontSize: 35,
     fontWeight: 'bold',
   },
   subtitleWrapper: {

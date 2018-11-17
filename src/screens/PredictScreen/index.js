@@ -50,7 +50,7 @@ class PredictScreen extends Component {
         const { trackable, probability } = response.prediction_result
         console.log(trackable)
         console.log(probability)
-        if (trackable === 'TRACKABLE' && probability >= 0.7) {
+        if (trackable === 'TRACKABLE' && probability >= 0.8) {
            return this.setState({ loading: false, result: 'TRACKABLE' })
         }
         else {
@@ -89,13 +89,13 @@ class PredictScreen extends Component {
               <AnswerNotification answer={this.state.result} />
               <CaptureAndShare
                 title='Partager'
-                color='#3498db'
+                color='white'
                 image={uri}
                 onCancel={this._cancel}
               />
               <XPButton
                 title='Non merci'
-                color='black'
+                color='white'
                 textOnly
                 onPress={this._cancel}
               />

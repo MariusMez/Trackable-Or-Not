@@ -19,31 +19,31 @@ class CaptureAndShare extends Component {
   _onShareClick() {
     this.setState({loading: true})
     captureScreen({
-      format: 'png',
-      quality: 0.8,
-      result: 'base64'
+      format: 'jpg',
+      quality: 0.8
     })
-    .then(uri => {
-      const image = `data:image/png;base64,${uri}`
-      
+    .then(uri => {      
       const shareOptions = {
         title: 'TrackableOrNot',
+        subject: 'Des news de mes TB !',
         message: 'Analyse très pertinente avec TrackableOrNot !',
-        url: image,
-        subject: 'Des news de mes TB !'
+        url: uri
       }
 
-      Share.open(shareOptions)
-        .then(info => {
+      Share.share(shareOptions, {
+        // Android only:
+        dialogTitle: 'Des news de mes TB !',
+      }).then(info => {
           if(info.message === 'OK') {
             this.props.onCancel()
           }
-        })
+        }).catch((err) => { console.log(err); });
     })
     .catch(e => {
+      console.log(e);
       Alert.alert(
         'Une erreur est survenue',
-        `Le partage du résultat est indisponible actuellement. Réessaye plus tard !`,
+        'Le partage du résultat est indisponible actuellement. Réessaye plus tard !',
         [
           {text: 'OK', onPress: () => {
             this.props.onCancel()

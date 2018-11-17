@@ -2,7 +2,9 @@ import { StyleSheet, Platform } from 'react-native'
 
 const styles = StyleSheet.create({
   button: Platform.select({
-    ios: {},
+    ios: {
+      backgroundColor: '#e74c3c',
+    },
     android: {
       elevation: 4,
       backgroundColor: '#e74c3c',
@@ -20,10 +22,10 @@ const styles = StyleSheet.create({
   }),
   text: Platform.select({
     ios: {
-      color: '#e74c3c',
+      color: 'white',
       textAlign: 'center',
       padding: 20,
-      fontSize: 18,
+      fontSize: 22,
     },
     android: {
       color: 'white',

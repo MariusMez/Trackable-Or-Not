@@ -17,6 +17,9 @@ See prerequisites here: https://facebook.github.io/react-native/docs/getting-sta
 git clone https://github.com/MariusMez/TrackableOrNot.git
 cd TrackableOrNot
 yarn
+react-native link react-native-share
+react-native link react-native-image-picker
+react-native link react-native-view-shot
 ```
 
 ## Usage

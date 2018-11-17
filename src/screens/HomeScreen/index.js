@@ -12,7 +12,7 @@ import styles from './styles'
 
 class HomeScreen extends Component {
   static navigationOptions = {
-    header: <Header title='TB Scanner' subtitle='"Trackable Or Not ?"' />,
+    header: <Header title='Trackable or Not ?' subtitle="Let's see!" />,
   }
   
   constructor() {
