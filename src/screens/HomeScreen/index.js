@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
-import { Alert, View, StatusBar, ActivityIndicator } from 'react-native'
+import { Alert, View, StatusBar, ActivityIndicator, SafeAreaView } from 'react-native'
 import PropTypes from 'prop-types'
 
 import ImagePicker from 'react-native-image-picker'
+import SplashScreen from 'react-native-splash-screen'
 
 import Header from '../../components/Header'
 import BackgroundImage from '../../components/BackgroundImage'
 import XPButton from '../../components/XPBouton'
 
 import styles from './styles'
+
+
 
 class HomeScreen extends Component {
   static navigationOptions = {
@@ -42,6 +45,12 @@ class HomeScreen extends Component {
     }    
   }
 
+  componentDidMount() {
+      // do stuff while splash screen is shown
+      // After having done stuff (such as async tasks) hide the splash screen
+      SplashScreen.hide();
+  }
+
   _onClick() {
     this.setState({ loading: true })
     ImagePicker.showImagePicker(this.options, response => {
@@ -60,19 +69,21 @@ class HomeScreen extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-          <StatusBar hidden />
-          <BackgroundImage source={require('../../assets/bkg.jpg')}>
-            {
-              !this.state.loading ?
-                  <XPButton
-                    title='Analyser une image'
-                    onPress={this._onClick}
-                  />
-              : <ActivityIndicator size="large" color="#e74c3c" />
-            }
-          </BackgroundImage>
-      </View>
+      <SafeAreaView style={{flex: 1, backgroundColor: '#e74c3c'}}>
+        <View style={styles.container}>
+            <StatusBar hidden />
+            <BackgroundImage source={require('../../assets/bkg.jpg')}>
+              {
+                !this.state.loading ?
+                    <XPButton
+                      title='Analyser une image'
+                      onPress={this._onClick}
+                    />
+                : <ActivityIndicator size="large" color="#e74c3c" />
+              }
+            </BackgroundImage>
+        </View>
+      </SafeAreaView>
     )
   }
 }

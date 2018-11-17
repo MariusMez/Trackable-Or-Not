@@ -50,7 +50,7 @@ class PredictScreen extends Component {
         const { trackable, probability } = response.prediction_result
         console.log(trackable)
         console.log(probability)
-        if (trackable === 'TRACKABLE' && probability >= 0.8) {
+        if (trackable === 'TRACKABLE' && probability >= 0.95) {
            return this.setState({ loading: false, result: 'TRACKABLE' })
         }
         else {

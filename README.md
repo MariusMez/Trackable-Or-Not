@@ -20,6 +20,7 @@ yarn
 react-native link react-native-share
 react-native link react-native-image-picker
 react-native link react-native-view-shot
+react-native link react-native-splash-screen
 ```
 
 ## Usage
