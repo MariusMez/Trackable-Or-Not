@@ -31,7 +31,7 @@ class PredictScreen extends Component {
     
     process.nextTick = setImmediate // RN polyfill
 
-    const url = 'https://tbscanner/api/v1/trackableornot'
+    const url = 'https://tbscanner.com/api/v1/trackableornot'
     const { uri } = this.props.navigation.state.params.image
     console.log(uri)
     // const file = { base64: data }
