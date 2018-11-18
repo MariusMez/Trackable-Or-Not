@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TrackableOrNot</string>
+    <string name="app_pitchline">TRACKABLE OR NOT ?</string>
 </resources>
