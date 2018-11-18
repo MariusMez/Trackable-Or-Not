@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native'
 
 const colors = {
   red: '#e74c3c',
+  green: '#03874D',
   white: 'rgb(255,255,255)',
   black: 'rgb(0,0,0)'
 }
@@ -14,7 +15,7 @@ const styles = StyleSheet.create({
   },
   titleWrapper: {
     height: 80,
-    backgroundColor: colors.red,
+    backgroundColor: colors.green,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 3,
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
     borderColor: colors.black
   },
   subtitle: {
-    color: colors.red,
+    color: colors.green,
     fontSize: 25,
     fontWeight: 'bold'
   }
