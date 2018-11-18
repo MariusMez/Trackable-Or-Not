@@ -22,6 +22,8 @@ const styles = StyleSheet.create({
   },
   title: {
     color: colors.white,
+    justifyContent: 'center',
+    alignItems: 'center',
     fontSize: 35,
     fontWeight: 'bold',
   },

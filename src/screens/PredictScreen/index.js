@@ -89,7 +89,6 @@ class PredictScreen extends Component {
               <AnswerNotification answer={this.state.result} />
               <CaptureAndShare
                 title='Partager'
-                color='white'
                 image={uri}
                 onCancel={this._cancel}
               />
