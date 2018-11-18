@@ -8,6 +8,8 @@ The AI core is currently selfhosted as a REST web service and not running inside
 
 The design is reflecting the original app 🙈, see this as a Proof of Concept 🤡 for a better app using AI extensively and currently in development 👨‍💻
 
+![App Preview](https://i.imgur.com/TE7Gmn3.png)
+
 
 ## Installation
 
